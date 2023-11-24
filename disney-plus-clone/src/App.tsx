@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import { makeStyles } from '@material-ui/core';
 import './App.css';
+import Footer from './Footer';
+import Header from './Header';
+
+
+const useStyles = makeStyles(() => ({
+   container: {
+       background: "linear-gradient(180deg, rgba(2,0,36,1) 71%, rgba(2,2,96,1) 100%)",
+   },
+   text: {
+       paddingTop:"100px"
+   }
+}));
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const classes = useStyles();
+ return (
+     <div className={classes.container}>
+       <Header/>
+       <Footer/>
+     </div>
+ );
 }
 
+
 export default App;
+
+
+
